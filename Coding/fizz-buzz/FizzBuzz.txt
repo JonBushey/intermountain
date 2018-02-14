@@ -1,0 +1,33 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. fizz-buzz.
+AUTHOR. Jon Bushey
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 Temp.
+  05 My_num		PIC 999.
+  05 remainder3 PIC 99.
+  05 remainder5 PIC 99.
+  05 Junk	    PIC 999.
+PROCEDURE DIVISION.
+  DISPLAY 'Program Starting'.
+  PERFORM 
+        VARYING My_num FROM 1 BY 1 UNTIL My_num > 100
+		Divide 5 into My_num giving Junk REMAINDER remainder5
+		Divide 3 into My_num giving Junk REMAINDER remainder3
+		if 0 = remainder5 and remainder3
+		  DISPLAY 'Fizz Buzz'
+		else
+		  if remainder5 = 0
+		  DISPLAY 'Buzz'
+		  else
+		    if remainder3 = 0
+			  DISPLAY 'Fizz'
+			else
+			  DISPLAY My_num
+			END-IF
+		  END-IF
+		END-IF
+  END-PERFORM
+  DISPLAY 'All done.'.
+  STOP RUN.
+       *> https://www.tutorialspoint.com/compile_cobol_online.php 
