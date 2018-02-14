@@ -1,0 +1,53 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7749F02A-CC66-4618-82FC-7137F2AE02E0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ticTac</RootNamespace>
+    <AssemblyName>ticTac</AssemblyName>
+    <OutputName>ticTac</OutputName>
+    <CWOutputType>Exe</CWOutputType>
+    <Model>Lib</Model>
+    <ApplicationIcon>if_gaming-game-play-multimedia-console-14_2191210.ico</ApplicationIcon>
+    <stack_size>16384</stack_size>
+    <CopyCore>True</CopyCore>
+    <DefineConstants>
+    </DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+    <warnings>on</warnings>
+    <GenerateMap>True</GenerateMap>
+    <line_numbers>False</line_numbers>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ticTac.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="ticTac001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="ticTa_RD.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="ticTa_RU.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="ticTa_SF.CLW">
+      <Generated>true</Generated>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
